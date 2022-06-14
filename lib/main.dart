@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
   Future getWeather() async {
     //adding the api key, later change it
     var url = Uri.parse(
-        "https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=048b837abdc0e994af7b84584642bbcd&units=metric");
+        "https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid={API Key}&units=metric");
     http.Response response = await http.get(url);
     var results = jsonDecode(response.body);
 
